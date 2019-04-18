@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>second project</title>
+    <script src="core/dist/ionic.js"></script>
+    <link href="core/css/ionic.bundle.css" rel="stylesheet">
+
+ <script type="text/javascript" src="cordova.js"></script>
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>محاسبه مهریه</ion-title>
+
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label position="floating">سال عقد</ion-label>
+                            <ion-input type="number" id="marriage-date"></ion-input>
+                        </ion-item>
+
+                    </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label>زوج در قید حیات است</ion-label>
+                            <ion-toggle id="isAlive" checked="true" slot="start" color="primary"></ion-toggle>
+                        </ion-item>
+
+                    </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label position="floating" id="request-year-label">سال درخواست مهریه</ion-label>
+                            <ion-input type="number" value="1397" id="request-year"></ion-input>
+                        </ion-item>
+
+                    </ion-col>
+
+                </ion-row>
+
+
+
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label position="floating">مبلغ مهریه در عقدنامه</ion-label>
+                            <ion-input id="documnet-amount" type="number"></ion-input>
+                        </ion-item>
+
+                    </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-button size="medium" id="calc-button">
+                                محاسبه مهریه
+                            </ion-button>
+                            <ion-button id="clear-button" color="danger" size="medium">
+                                پاک کردن
+                            </ion-button>
+                        </ion-item>
+
+                    </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <ion-item lines="none">
+
+                            <ion-label id="claculated-amount">-----------------</ion-label>
+
+                        </ion-item>
+
+                    </ion-col>
+
+                </ion-row>
+
+
+            </ion-grid>
+            <ion-alert-controller></ion-alert-controller>
+
+        </ion-content>
+
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+
+</html>
